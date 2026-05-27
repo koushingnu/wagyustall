@@ -40,13 +40,13 @@ export function HospitalitySection() {
           <article key={title} className={idx === 1 ? "grid grid-cols-[55%_45%] gap-6 max-md:grid-cols-1" : "grid grid-cols-[45%_55%] gap-6 max-md:grid-cols-1"}>
             {idx === 1 ? (
               <>
-                <div className="flex flex-col justify-center pr-4">
+                <div className="flex flex-col justify-center pr-4 max-md:order-2">
                   <h3 className="mb-4 text-[18px] font-bold leading-tight">{title}</h3>
                   <p className="whitespace-pre-line text-[13px] leading-relaxed text-white/85">
                     {description}
                   </p>
                 </div>
-                <div className="relative aspect-[16/10] w-full overflow-hidden">
+                <div className="relative aspect-[16/10] w-full overflow-hidden max-md:order-1">
                   <Image
                     src={image}
                     alt={title}
@@ -58,7 +58,7 @@ export function HospitalitySection() {
               </>
             ) : (
               <>
-                <div className="relative aspect-[16/10] w-full overflow-hidden">
+                <div className="relative aspect-[16/10] w-full overflow-hidden max-md:order-1">
                   <Image
                     src={image}
                     alt={title}
@@ -67,7 +67,7 @@ export function HospitalitySection() {
                     sizes="(max-width: 768px) 100vw, 45vw"
                   />
                 </div>
-                <div className="flex flex-col justify-center pr-4">
+                <div className="flex flex-col justify-center pr-4 max-md:order-2">
                   <h3 className="mb-4 text-[18px] font-bold leading-tight">{title}</h3>
                   <p className="whitespace-pre-line text-[13px] leading-relaxed text-white/85">
                     {description}

@@ -64,7 +64,7 @@ export function MenuSection() {
         </header>
 
         <div className="grid grid-cols-[20%_80%] gap-8 max-md:grid-cols-1">
-          <aside className="space-y-6 text-[11px]">
+          <aside className="space-y-6 text-[11px] max-md:order-2">
             {menuImages.map(({ key, src, aspectRatio }) => (
               <div key={key}>
                 <div className={`relative ${aspectRatio} overflow-hidden`}>
@@ -73,7 +73,7 @@ export function MenuSection() {
                     alt={t.imageLabels[key as keyof typeof t.imageLabels]}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 20vw"
+                    sizes="(max-width: 768px) 100vw, 20vw"
                   />
                 </div>
                 <p className="mt-2 text-center text-white/80">
@@ -83,7 +83,7 @@ export function MenuSection() {
             ))}
           </aside>
 
-          <div className="space-y-6">
+          <div className="space-y-6 max-md:order-1">
             {menuData.map(({ category, items }) => (
               <div key={category}>
                 <h3 className="mb-4 text-[15px] font-semibold text-[#f2cc3d]">{category}</h3>
