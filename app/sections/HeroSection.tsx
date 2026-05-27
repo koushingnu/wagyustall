@@ -46,10 +46,11 @@ export function HeroSection() {
           alt="Wagyu Stall hero image"
           fill
           priority
-          className="object-cover object-center [object-position:center_22%]"
+          className="object-cover"
+          style={{ objectPosition: "center 35%" }}
           sizes="(max-width: 768px) 100vw, 59vw"
         />
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-black via-black/65 via-40% to-transparent blur-md" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-48 bg-gradient-to-r from-black via-black/85 via-45% to-transparent blur-xl" />
       </div>
     </section>
   );
